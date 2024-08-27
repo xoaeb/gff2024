@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'landing', component: LandingComponent },
   { path: 'registration-success', component: RegistrationSuccessComponent },
 
-  { path: 'amount-enter', component: AmountEnterComponent },
+  { path: 'amount', component: AmountEnterComponent },
   { path: 'upi', component: UpiComponent },
   { path: 'success', component: RechargeSuccessComponent },
 

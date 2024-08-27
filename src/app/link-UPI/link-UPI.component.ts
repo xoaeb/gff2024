@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-link-UPI',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinkUPIComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
   mobileNumber: string = '';
-
+  showQR:boolean=false
   ngOnInit() {
+  }
+
+  showQRCode(){
+    this.showQR=!this.showQR
+  }
+  nextPage(){
+    this.router.navigate(['/registration-success']);
+
   }
 
 }

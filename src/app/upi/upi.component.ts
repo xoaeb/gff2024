@@ -11,5 +11,7 @@ export class UpiComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  nextPage(){
+    
+  }
 }

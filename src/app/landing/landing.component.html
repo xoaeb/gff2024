@@ -1,0 +1,66 @@
+<body class="bg-gray-900">
+    <!-- Section with background image and centered content -->
+    <section class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url('../assets/images/bg.jpg');">
+        <div class=" p-10 rounded-lg">
+            <!-- Centered logos -->
+            <div class="flex flex-col items-center space-y-8">
+                <img src="../assets/images/Mahindra SUV.svg" alt="Logo 1" class="w-32 h-32 object-cover">
+
+                <span class="text-white text-5xl">Pay</span>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <div *ngIf="showPopup" class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+                <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                    <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                                <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                  </svg>
+                            </div>
+                            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                                <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Allow This App to Use Your GPS Location</h3>
+                                <div class="mt-2">
+                                    <p class="text-sm text-gray-500">This app needs access to your location to provide personalized content and improve your experience. Your location data will be used according to our privacy policy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <!-- Use location button with a location icon -->
+                        <button type="button" class="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto" (click)="changePopup()">
+                          <!-- Location icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11.25c.966 0 1.75-.784 1.75-1.75S12.966 7.75 12 7.75s-1.75.784-1.75 1.75.784 1.75 1.75 1.75z" />
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M4.806 9.963a8.25 8.25 0 0114.388 0c1.693 2.892-1.13 7.837-7.194 11.588-6.065-3.751-8.888-8.696-7.194-11.588z" />
+                          </svg>
+                          Allow Location Access
+                      </button>
+                        <!-- Cancel button -->
+                        <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto" (click)="changePopup()">
+                          Cancel
+                      </button> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer with UPI logo -->
+    <footer class="w-full bg-gray-800 text-white flex justify-center items-center" style="height: 1cm;">
+        <img src="../assets/images/UPICircle.png" alt="UPI Logo" class="h-full">
+    </footer>
+
+
+</body>

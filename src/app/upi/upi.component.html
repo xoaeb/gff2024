@@ -1,4 +1,4 @@
-<body class="bg-gray-100 h-screen flex items-center justify-center">
+<section class="flex items-center justify-center h-screen bg-cover bg-center">
     <div class="container bg-white shadow-md rounded-lg p-6 max-w-sm mx-auto">
         <!-- Header Section -->
         <div class="flex justify-between items-center border-b pb-4 mb-4">
@@ -15,13 +15,7 @@
             <div class="upi-input">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">ENTER 6-DIGIT UPI PIN</h2>
                 <div class="flex justify-center space-x-2 mb-6">
-                    <!-- Dots representing the PIN input -->
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
+                    <span *ngFor="let pin of pinArray" class="dot w-4 h-4 rounded-full" [ngClass]="{'bg-gray-300': !pin, 'bg-blue-500': pin}"></span>
                 </div>
                 <div class="info text-gray-500 text-sm">
                     <p>You are <strong>SENDING ₹100.00</strong> from your account to <strong>UAT TESTING DATA</strong></p>
@@ -31,18 +25,9 @@
 
         <!-- Numpad Section -->
         <div class="numpad grid grid-cols-3 gap-4 mt-8">
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">1</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">2</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">3</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">4</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">5</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">6</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">7</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">8</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">9</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md delete">&#10006;</button>
-            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md">0</button>
+            <button *ngFor="let num of [1,2,3,4,5,6,7,8,9,0]" class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md" (click)="onNumClick(num)">{{ num }}</button>
+            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md delete" (click)="onDeleteClick()">&#10006;</button>
             <button class="bg-blue-500 text-white text-lg font-semibold py-2 rounded-md submit" (click)="nextPage()">Submit</button>
         </div>
     </div>
-</body>
+</section>

@@ -2,22 +2,22 @@
     <div class="container bg-white shadow-md rounded-lg p-6 max-w-sm mx-auto">
         <!-- Header Section -->
         <div class="flex justify-between items-center border-b pb-4 mb-4">
-            <div class="text-sm text-gray-600 font-medium">The Cosmos Co-Operative ...</div>
-            <div class="text-sm text-gray-600 font-medium">XXXX6274</div>
+            <div class="text-sm md:text-base text-gray-600 font-medium">The Cosmos Co-Operative ...</div>
+            <div class="text-sm md:text-base text-gray-600 font-medium">XXXX6274</div>
         </div>
 
         <!-- PIN Entry Section -->
         <div class="pin-entry-section text-center">
             <div class="upi-details mb-6">
-                <p class="text-gray-500 text-sm">To: <span class="font-semibold">UAT TESTING DATA</span></p>
-                <p class="text-gray-500 text-sm">Sending: <span class="font-semibold">₹100.00</span></p>
+                <p class="text-gray-500 text-sm md:text-base">To: <span class="font-semibold">UAT TESTING DATA</span></p>
+                <p class="text-gray-500 text-sm md:text-base">Sending: <span class="font-semibold">₹100.00</span></p>
             </div>
             <div class="upi-input">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">ENTER 6-DIGIT UPI PIN</h2>
+                <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">ENTER 6-DIGIT UPI PIN</h2>
                 <div class="flex justify-center space-x-2 mb-6">
                     <span *ngFor="let pin of pinArray" class="dot w-4 h-4 rounded-full" [ngClass]="{'bg-gray-300': !pin, 'bg-blue-500': pin}"></span>
                 </div>
-                <div class="info text-gray-500 text-sm">
+                <div class="info text-gray-500 text-sm md:text-base">
                     <p>You are <strong>SENDING ₹100.00</strong> from your account to <strong>UAT TESTING DATA</strong></p>
                 </div>
             </div>

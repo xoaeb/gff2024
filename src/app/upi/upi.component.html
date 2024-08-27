@@ -1,29 +1,29 @@
-<body class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="container bg-white shadow-md rounded-lg p-6 max-w-sm mx-auto">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container bg-white shadow-md rounded-lg p-6 max-w-sm md:max-w-md lg:max-w-lg mx-auto">
         <!-- Header Section -->
         <div class="flex justify-between items-center border-b pb-4 mb-4">
-            <div class="text-sm text-gray-600 font-medium">The Cosmos Co-Operative ...</div>
-            <div class="text-sm text-gray-600 font-medium">XXXX6274</div>
+            <div class="text-sm md:text-base text-gray-600 font-medium">The Cosmos Co-Operative ...</div>
+            <div class="text-sm md:text-base text-gray-600 font-medium">XXXX6274</div>
         </div>
 
         <!-- PIN Entry Section -->
         <div class="pin-entry-section text-center">
             <div class="upi-details mb-6">
-                <p class="text-gray-500 text-sm">To: <span class="font-semibold">UAT TESTING DATA</span></p>
-                <p class="text-gray-500 text-sm">Sending: <span class="font-semibold">₹100.00</span></p>
+                <p class="text-gray-500 text-sm md:text-base">To: <span class="font-semibold">UAT TESTING DATA</span></p>
+                <p class="text-gray-500 text-sm md:text-base">Sending: <span class="font-semibold">₹100.00</span></p>
             </div>
             <div class="upi-input">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4">ENTER 6-DIGIT UPI PIN</h2>
+                <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">ENTER 6-DIGIT UPI PIN</h2>
                 <div class="flex justify-center space-x-2 mb-6">
                     <!-- Dots representing the PIN input -->
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
-                    <span class="dot w-4 h-4 bg-gray-300 rounded-full"></span>
+                    <span class="dot w-4 h-4 md:w-5 md:h-5 bg-black rounded-full"></span>
+                    <span class="dot w-4 h-4 md:w-5 md:h-5 bg-black rounded-full"></span>
+                    <span class="dot w-4 h-4 md:w-5 md:h-5 bg-black rounded-full"></span>
+                    <span class="dot w-4 h-4 md:w-5 md:h-5 bg-black rounded-full"></span>
+                    <span class="dot w-4 h-4 md:w-5 md:h-5 bg-black rounded-full"></span>
+                    <span class="dot w-4 h-4 md:w-5 md:h-5 bg-black rounded-full"></span>
                 </div>
-                <div class="info text-gray-500 text-sm">
+                <div class="info text-gray-500 text-sm md:text-base">
                     <p>You are <strong>SENDING ₹100.00</strong> from your account to <strong>UAT TESTING DATA</strong></p>
                 </div>
             </div>
@@ -45,6 +45,8 @@
             <button class="bg-blue-500 text-white text-lg font-semibold py-2 rounded-md submit">Submit</button>
         </div>
     </div>
+    <!-- <button class="bg-blue-500 text-white py-2 px-4 rounded-md mt-4" onclick="nextPage()">Next</button> -->
 </body>
 
-<button (click)="nextPage()">next</button>
+
+<!-- <button (click)="nextPage()">next</button> -->

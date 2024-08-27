@@ -25,8 +25,11 @@
 
         <!-- Numpad Section -->
         <div class="numpad grid grid-cols-3 gap-4 mt-8">
-            <button *ngFor="let num of [1,2,3,4,5,6,7,8,9,0]" class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md" (click)="onNumClick(num)">{{ num }}</button>
+            <button *ngFor="let num of [1,2,3,4,5,6,7,8,9]" class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md" (click)="onNumClick(num)">{{ num }}</button>
             <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md delete" (click)="onDeleteClick()">&#10006;</button>
+
+            <button *ngFor="let num of [0]" class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md" (click)="onNumClick(num)">{{ num }}</button>
+         
             <button class="bg-blue-500 text-white text-lg font-semibold py-2 rounded-md submit" (click)="nextPage()">Submit</button>
         </div>
     </div>

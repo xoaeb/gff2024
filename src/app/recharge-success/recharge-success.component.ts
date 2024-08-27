@@ -13,8 +13,11 @@ export class RechargeSuccessComponent implements OnInit {
   ngOnInit() {
   }
   nextPage(){
-    this.router.navigate(['./'])
 
   }
+
+
+  
+  
 
 }

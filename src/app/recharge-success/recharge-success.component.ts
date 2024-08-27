@@ -4,20 +4,16 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-recharge-success',
   templateUrl: './recharge-success.component.html',
-  styleUrls: ['./recharge-success.component.css']
+  styleUrls: ['./recharge-success.component.css'],
 })
 export class RechargeSuccessComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
+  ngOnInit() {}
+  nextPage() {
+    const browserName = navigator.appName;
+    console.log(browserName);
 
-  ngOnInit() {
+    window.close();
   }
-  nextPage(){
-
-  }
-
-
-  
-  
-
 }

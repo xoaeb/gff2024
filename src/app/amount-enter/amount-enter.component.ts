@@ -16,5 +16,11 @@ export class AmountEnterComponent implements OnInit {
     this.router.navigate(['/upi']);
 
   }
+  amount: number = 100;  // Default amount
+
+  // Method to set the amount when a button is clicked
+  setAmount(value: number) {
+    this.amount = value;
+  }
 
 }

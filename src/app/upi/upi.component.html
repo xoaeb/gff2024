@@ -1,36 +1,37 @@
-<section class="flex items-center justify-center h-screen bg-cover bg-center">
-    <div class="container bg-white shadow-md rounded-lg p-6 max-w-sm mx-auto">
-        <!-- Header Section -->
-        <div class="flex justify-between items-center border-b pb-4 mb-4">
-            <div class="text-sm md:text-base text-gray-600 font-medium">The Cosmos Co-Operative ...</div>
-            <div class="text-sm md:text-base text-gray-600 font-medium">XXXX6274</div>
+<section class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url('../../assets/images/abstract.jpg')">
+    <div class="container w-4/5 h-1/2 bg-white shadow-md rounded-lg p-6 flex flex-row mx-auto">
+        <!-- PIN Entry Section on the Left -->
+        <div class="w-2/3 pr-6">
+            <!-- Header Section -->
+            <div class="flex justify-between items-center border-b pb-4 mb-4">
+                <div class="text-sm md:text-base text-gray-600 font-medium">The Cosmos Co-Operative ...</div>
+                <div class="text-sm md:text-base text-gray-600 font-medium">XXXX6274</div>
+            </div>
+
+            <!-- PIN Entry Details -->
+            <div class="pin-entry-section text-center">
+                <div class="upi-details mb-6">
+                    <p class="text-gray-500 text-sm md:text-base">To: <span class="font-semibold">UAT TESTING DATA</span></p>
+                    <p class="text-gray-500 text-sm md:text-base">Sending: <span class="font-semibold">₹100.00</span></p>
+                </div>
+                <div class="upi-input">
+                    <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">ENTER 6-DIGIT UPI PIN</h2>
+                    <div class="flex justify-center space-x-2 mb-6">
+                        <span *ngFor="let pin of pinArray" class="dot w-4 h-4 rounded-full" [ngClass]="{'bg-gray-300': !pin, 'bg-blue-500': pin}"></span>
+                    </div>
+                    <div class="info text-gray-500 text-sm md:text-base">
+                        <p>You are <strong>SENDING ₹100.00</strong> from your account to <strong>UAT TESTING DATA</strong></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- PIN Entry Section -->
-        <div class="pin-entry-section text-center">
-            <div class="upi-details mb-6">
-                <p class="text-gray-500 text-sm md:text-base">To: <span class="font-semibold">UAT TESTING DATA</span></p>
-                <p class="text-gray-500 text-sm md:text-base">Sending: <span class="font-semibold">₹100.00</span></p>
-            </div>
-            <div class="upi-input">
-                <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">ENTER 6-DIGIT UPI PIN</h2>
-                <div class="flex justify-center space-x-2 mb-6">
-                    <span *ngFor="let pin of pinArray" class="dot w-4 h-4 rounded-full" [ngClass]="{'bg-gray-300': !pin, 'bg-blue-500': pin}"></span>
-                </div>
-                <div class="info text-gray-500 text-sm md:text-base">
-                    <p>You are <strong>SENDING ₹100.00</strong> from your account to <strong>UAT TESTING DATA</strong></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Numpad Section -->
-        <div class="numpad grid grid-cols-3 gap-4 mt-8">
+        <!-- Numpad Section on the Right -->
+        <div class="w-1/3 grid grid-cols-3 gap-4">
             <button *ngFor="let num of [1,2,3,4,5,6,7,8,9]" class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md" (click)="onNumClick(num)">{{ num }}</button>
             <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md delete" (click)="onDeleteClick()">&#10006;</button>
-
-            <button *ngFor="let num of [0]" class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md" (click)="onNumClick(num)">{{ num }}</button>
-         
-            <button class="bg-blue-500 text-white text-lg font-semibold py-2 rounded-md submit" (click)="nextPage()">Submit</button>
+            <button class="bg-gray-200 text-gray-800 text-lg font-semibold py-2 rounded-md" (click)="onNumClick(0)">0</button>
+            <button class="bg-blue-500 text-white text-lg text-lg font-semibold py-2 rounded-md" (click)="nextPage()">Submit</button>
         </div>
     </div>
 </section>

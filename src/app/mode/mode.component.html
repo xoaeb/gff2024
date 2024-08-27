@@ -1,5 +1,7 @@
-<section class="flex items-center justify-center h-screen bg-cover bg-center" style="background-image: url('../../assets/images/abstract.jpg')">
-    <div class="container px-5 py-24 mx-auto">
+<section class="flex items-center justify-center min-h-screen bg-cover bg-center relative" style="background-image: url('../../assets/images/abstract.jpg')">
+    <!-- Optional overlay for better text visibility -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="container px-5 py-24 mx-auto relative z-10">
         <div class="text-center mb-20">
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-slate-100 mb-4">
                 Choose an Option to Complete Your In-Car Payment
@@ -14,7 +16,7 @@
         <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
             <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
                 <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-                    <img src="../../assets/images/toll-road.png" alt="Arrow Right" class="ml-2" />
+                    <img src="../../assets/images/toll-road.png" alt="Fast Tag" class="w-full h-full object-contain" />
                 </div>
                 <div class="flex-grow">
                     <h2 class="text-slate-100 text-lg title-font font-medium mb-3">
@@ -27,7 +29,7 @@
             </div>
             <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
                 <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-                    <img src="../../assets/images/shop.png" alt="Arrow Right" class="ml-2" />
+                    <img src="../../assets/images/shop.png" alt="Drive Through" class="w-full h-full object-contain" />
                 </div>
                 <div class="flex-grow">
                     <h2 class="text-slate-100 text-lg title-font font-medium mb-3">
@@ -40,7 +42,7 @@
             </div>
             <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
                 <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-                    <img src="../../assets/images/gasoline-pump.png" alt="Arrow Right" class="ml-2" />
+                    <img src="../../assets/images/gasoline-pump.png" alt="Fuel" class="w-full h-full object-contain" />
                 </div>
                 <div class="flex-grow">
                     <h2 class="text-slate-100 text-lg title-font font-medium mb-3">
@@ -52,8 +54,8 @@
                 </div>
             </div>
         </div>
-        <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" (click)="nextPage()">
-      Link UPI to Get started
-    </button>
+        <button (click)="nextPage()" class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            Link UPI to Get Started
+        </button>
     </div>
 </section>

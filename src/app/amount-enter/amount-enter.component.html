@@ -29,12 +29,13 @@
                 </div>
 
                 <!-- Quick Amount Buttons -->
-                <div class="flex justify-between mb-4">
+                <div class="flex flex-col sm:flex-row sm:justify-between mb-4 space-y-2 sm:space-y-0 sm:space-x-2">
                     <button (click)="setAmount('100')" class="bg-transparent border border-gray-500 text-gray-900 py-2 px-6 rounded hover:bg-gray-200">₹ 100</button>
                     <button (click)="setAmount('500')" class="bg-transparent border border-gray-500 text-gray-900 py-2 px-6 rounded hover:bg-gray-200">₹ 500</button>
                     <button (click)="setAmount('1000')" class="bg-transparent border border-gray-500 text-gray-900 py-2 px-6 rounded hover:bg-gray-200">₹ 1000</button>
                     <button (click)="setAmount('2000')" class="bg-transparent border border-gray-500 text-gray-900 py-2 px-6 rounded hover:bg-gray-200">₹ 2000</button>
                 </div>
+
 
                 <!-- Pay Now Button -->
                 <button class="py-2 px-8 rounded-lg font-semibold focus:outline-none" [ngClass]="{'bg-blue-500 text-white hover:bg-blue-600': isButtonEnabled, 'bg-gray-400 text-gray-200': !isButtonEnabled}" [disabled]="!isButtonEnabled" (click)="nextPage()">Pay Now</button>                </div>

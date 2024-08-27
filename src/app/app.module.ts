@@ -11,6 +11,8 @@ import { AmountEnterComponent } from './amount-enter/amount-enter.component';
 import { UpiComponent } from './upi/upi.component';
 import { RechargeSuccessComponent } from './recharge-success/recharge-success.component';
 
+import { FormsModule } from '@angular/forms';  // Import FormsModule
+
 @NgModule({
   declarations: [							
     AppComponent,
@@ -24,7 +26,7 @@ import { RechargeSuccessComponent } from './recharge-success/recharge-success.co
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

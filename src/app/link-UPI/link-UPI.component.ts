@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LinkUPIComponent implements OnInit {
 
   constructor() { }
+  mobileNumber: string = '';
 
   ngOnInit() {
   }

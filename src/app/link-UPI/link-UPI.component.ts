@@ -16,10 +16,20 @@ export class LinkUPIComponent implements OnInit {
 
   showQRCode(){
     this.showQR=!this.showQR
+
+    setTimeout(() => {
+      this.nextPage()
+    }, 5000);
   }
   nextPage(){
     this.router.navigate(['/registration-success']);
 
+  }
+  isButtonEnabled: boolean = false;
+
+  validateInput(): void {
+    // Check if the mobile number length is 10 digits
+    this.isButtonEnabled = this.mobileNumber.length === 10;
   }
 
 }

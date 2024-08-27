@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing.component.css'],
 })
 export class LandingComponent implements OnInit {
-  constructor() {}
+  constructor(private router:Router) {}
 
   showPopup: boolean = true;
 
@@ -14,5 +15,11 @@ export class LandingComponent implements OnInit {
 
   changePopup() {
     this.showPopup = !this.showPopup;
+  }
+
+  selectModes(){
+    this.router.navigate(['/modes']);
+
+
   }
 }
